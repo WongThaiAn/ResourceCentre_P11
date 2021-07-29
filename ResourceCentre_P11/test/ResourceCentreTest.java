@@ -46,6 +46,8 @@ public class ResourceCentreTest {
 		//The item just added is as same as the second item of the list
 		ResourceCentre.addCamcorder(camcorderList, cc2);
 		assertEquals("Check that Camcorder arraylist size is 2", 2, camcorderList.size());
+		//assertEquals("Check that item size is 2", 2, item.size());
+		
 		assertSame("Check that Camcorder is added", cc2, camcorderList.get(1));
 	}
 	@Test
@@ -142,13 +144,20 @@ public class ResourceCentreTest {
 		ResourceCentre.addChromebook(chromebookList, cb1);
 		//normal
 		Boolean ok = ResourceCentre.doLoanChromebook(chromebookList, "CB0011", "8-8-2020" );
-		assertTrue("Test if an available item is ok to loan?", ok);		
+		assertTrue("Test if an available item is ok to loan?", ok);
+		//assertTrue("Test if available item is deleted?", ok);
 		//error condition
 		ok = ResourceCentre.doLoanChromebook(chromebookList, "CB0011", "8-8-2020" );
 		assertFalse("Test if the same item is NOT ok to loan again?", ok);	
 		//error
 		ResourceCentre.addChromebook(chromebookList, cb2);
 		cb2.setIsAvailable(false);
+		//item1.setIsAvailable(false);
+		
+		//Assert.assertTrue(item1.setIsAvailable(false));
+		
+		//Assert.assertNull("Test if item is empty after item 2 is removed",item2);
+		
 		ok = ResourceCentre.doLoanChromebook(chromebookList, "CB0012", "8-8-2020" );
 		assertFalse("Test that un-available item is NOT ok to loan?", ok);
 		//error condition
