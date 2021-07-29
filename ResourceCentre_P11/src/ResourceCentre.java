@@ -2,10 +2,13 @@ import java.util.ArrayList;
 
 public class ResourceCentre {
 
+<<<<<<< HEAD
 
 	/**
 	 * 
 	 */
+=======
+>>>>>>> branch 'master' of https://github.com/WongThaiAn/ResourceCentre_P11.git
 	private static final int OPTION_QUIT = 5;
 	public static void main(String[] args) {
 
@@ -31,8 +34,13 @@ public class ResourceCentre {
 
 			} else if (option == 2) {
 				// Add a new item
+<<<<<<< HEAD
 				ResourceCentre.setHeader("ADD");
 				ResourceCentre.itemTypeMenu();
+=======
+				ResourceCentre.setHeader("ADD");			
+				itemTypeMenu();
+>>>>>>> branch 'master' of https://github.com/WongThaiAn/ResourceCentre_P11.git
 				
 				int itemType = Helper.readInt("Enter option to select item type > ");
 
@@ -275,9 +283,13 @@ public class ResourceCentre {
 		boolean isReturned = false;
 
 		for (int i = 0; i < camcorderList.size(); i++) {
+<<<<<<< HEAD
 			
 			String assetTag = camcorderList.get(i).getAssetTag();
 			
+=======
+			String assetTag = camcorderList.get(i).getAssetTag();
+>>>>>>> branch 'master' of https://github.com/WongThaiAn/ResourceCentre_P11.git
 			if (tag.equalsIgnoreCase(assetTag)
 					&& camcorderList.get(i).getIsAvailable() == false) {
 				camcorderList.get(i).setIsAvailable(true);
@@ -306,9 +318,13 @@ public class ResourceCentre {
 		boolean isReturned = false;
 
 		for (int i = 0; i < chromebookList.size(); i++) {
+<<<<<<< HEAD
 			
 			String assetTag = chromebookList.get(i).getAssetTag();
 			
+=======
+			String assetTag = chromebookList.get(i).getAssetTag();
+>>>>>>> branch 'master' of https://github.com/WongThaiAn/ResourceCentre_P11.git
 			if (tag.equalsIgnoreCase(assetTag)
 					&& chromebookList.get(i).getIsAvailable() == false) {
 				chromebookList.get(i).setIsAvailable(true);
